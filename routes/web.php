@@ -18,6 +18,7 @@ Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio
 
 Route::get('/about', [PortfolioController::class, 'about'])->name('portfolio.about');
 
-Route::get('/projects', [PortfolioController::class, 'projects'])->name('portfolio.projects');
+Route::get('/projects', [PortfolioController::class, 'feedback'])->name('portfolio.feedback');
 
 Route::get('/contact', [PortfolioController::class, 'contact'])->name('portfolio.contact');
+Route::post('/contact', [PortfolioController::class, 'submitContact'])->name('portfolio.contact.submit');
